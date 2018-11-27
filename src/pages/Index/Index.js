@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import { Link } from 'react-router-dom'
 
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Typography from '@material-ui/core/Typography'
+
 
 // import Action from '../../actions/act'
 //
@@ -22,9 +26,14 @@ class Index extends Component {
 
   render() {
     return (
-      <Button variant="contained" color="primary">
-        Test Message
-      </Button>
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+          <AppBar position="fixed">
+            <Toolbar>
+            </Toolbar>
+          </AppBar>
+        </Grid>
+      </Grid>
     )
   }
 }

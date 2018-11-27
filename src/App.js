@@ -7,6 +7,15 @@ import History from './store/History'
 import Store from './store/Store'
 import RouteCfg from './store/Router'
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import red from '@material-ui/core/colors/red'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+  }
+})
+
 const storeSetting = Store()
 
 class App extends Component {
@@ -18,11 +27,13 @@ class App extends Component {
 
   render() {
     return (
-      <Provider store={storeSetting}>
-        <Router BrowserHistory={History} basename="/">
-          <RouteCfg />
-        </Router>
-      </Provider>
+      <MuiThemeProvider theme={theme}>
+        <Provider store={storeSetting}>
+          <Router BrowserHistory={History} basename="/">
+            <RouteCfg />
+          </Router>
+        </Provider>
+      </MuiThemeProvider>
     )
   }
 
