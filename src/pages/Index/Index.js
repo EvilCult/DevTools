@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 // import { Link } from 'react-router-dom'
 
+import Button from '@material-ui/core/Button';
+
 // import Action from '../../actions/act'
 //
 // let Act = new Action()
@@ -20,7 +22,9 @@ class Index extends Component {
 
   render() {
     return (
-      <div>Test Message</div>
+      <Button variant="contained" color="primary">
+        Test Message
+      </Button>
     )
   }
 }
